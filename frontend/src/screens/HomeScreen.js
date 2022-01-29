@@ -5,7 +5,7 @@ import Product from '../component/Product';
 
 const HomeScreen = () => {
     return (
-        <div className='flex content-center  items-center flex-grow px-2 py-3 w-full flex-wrap md:justify-center lg:justify-start sm:justify-center flex-1'>  
+        <div className='flex content-center  items-center flex-grow px-2 py-3 mr-auto ml-auto flex-wrap md:justify-center lg:justify-start sm:justify-center flex-2'>  
             {
                 products.map( (product) => 
                 
