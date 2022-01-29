@@ -7,6 +7,7 @@ const Product = ({ product }) => {
         
         <div className="max-w-sm rounded overflow-hidden shadow-lg   mb-2 mt-2 ml-auto mr-auto" >
             
+            
             <Link to={`product/${product._id}`}>
                 <img className="w-full rounded-t-xl" src={product.image} alt="Sunset in the mountains" />
             </Link>

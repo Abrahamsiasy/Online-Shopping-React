@@ -1,0 +1,22 @@
+{
+  "name": "shopping",
+  "version": "1.0.0",
+  "description": "react MERN online shopping web app",
+  "main": "server.js",
+  "scripts": {
+    "start": "node backend/server"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Abrahamsiasy/Online-Shopping-React.git"
+  },
+  "author": "Abraham Sasay",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Abrahamsiasy/Online-Shopping-React/issues"
+  },
+  "homepage": "https://github.com/Abrahamsiasy/Online-Shopping-React#readme",
+  "dependencies": {
+    "express": "^4.17.2"
+  }
+}

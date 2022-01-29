@@ -1,25 +1,69 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import Rating from '../component/Rating'
 
-import prodcuts from '../products'
+// import prodcuts from '../products'
+import axios from 'axios';
+
 import { useParams } from "react-router-dom";
 
+import mediumZoom from 'medium-zoom'
 
+export function AddLibrary(urlOfTheLibrary) {
+  const script = document.createElement('script');
+  script.src = urlOfTheLibrary;
+  script.async = true;
+  document.body.appendChild(script);
+}
 
+export function Mainjs(){
+  mediumZoom('.zoom', {
+    margin: 50,
+    background: 'gray'
+})
+}
 
 const ProdcutScreen = () => {
   let { id } = useParams();
+  const [product, setProduct] = useState([])
 
-  const product = prodcuts.find(p => p._id === id)
+  useEffect( () => {
+    const fetchProduct = async() => {
+      const res = await axios.get(`/api/products/${id}`)
+      console.log(res.data)
+      setProduct(res.data)
+    }
+    fetchProduct()
+  }, [] )
+  // let { id } = useParams();
+
+  // const product = prodcuts.find(p => p._id === id)
   return (
 
     <div>
+      <div className='flex justify-end '>
+      <button
+                className="bg-white text-gray-800 flex items-end mr-4"
+                type="button">
+                <i className="fas fa-backward mr-2"></i>
+                back</button>
+      </div>
       <div className="md:flex my-3 md:ml-auto md:mr-auto ">
         <div className="md:flex-shrink-0 md:justify-center items-center">
           <div className='flex justify-center items-center ml-auto mr-auto'>
-            <img className="w-96 rounded-lg items-center" src={product.image} alt="Woman paying for a purchase" />
+            <img className="zoom w-96 rounded-lg items-center hover:scale-150 hover:mt-20  hover:mb-20 hover:ml-20" src={product.image} alt="Woman paying for a purchase" />
+          {
+            AddLibrary(`${mediumZoom}`)
+          }
+
           </div>
+
+          
+          
+
         </div>
+        {
+          Mainjs()
+        }
         <div className="mt-4 ml-2 md:mt-0 md:ml-6 flex-1 0">
           <div className="uppercase text-3xl tracking-wide text-gray-700 font-bold">{product.name}</div>
           <a href="#" className="block mt-1 text-lg leading-tight font-semibold text-gray-900 hover:underline">{product.brand}</a>
@@ -31,7 +75,7 @@ const ProdcutScreen = () => {
           {
             product.countInStock > 0 ?
               <p className='font-bold text-xl ml-10'>{product.countInStock}
-                <span className='font-light'>in stock</span>
+                <span className='font-light'> in stock</span>
               </p>
               :
               <p className='font-light text-red-900 text-xl ml-10'>
@@ -55,6 +99,8 @@ const ProdcutScreen = () => {
 
 
       </div>
+
+
     </div>
 
   )
