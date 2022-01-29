@@ -1,15 +1,18 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const Header = () => {
 
     let leftLinks =
         [
             {
+                id: 1,
                 name: "Today's Deal",
                 link: "/today",
                 icon: "lg:text-gray-300 text-gray-500 text-lg leading-lg mr-2 fas fa-calendar-week"
             },
             {
+                id: 2,
                 name: "New Arivals",
                 link: "/new",
                 icon: "lg:text-gray-300 text-gray-500 text-lg leading-lg mr-2 fas fa-plane-arrival"
@@ -20,21 +23,25 @@ const Header = () => {
     let sochials =
         [
             {
+                id: 1,
                 name: "facebook",
                 link: "/facebook",
                 icon: "lg:text-gray-300 text-gray-500 fab fa-facebook text-lg leading-lg "
             },
             {
+                id: 2,
                 name: "twitter",
                 link: "/new",
                 icon: "lg:text-gray-300 text-gray-500 fab fa-twitter text-lg leading-lg "
             },
             {
+                id: 3,
                 name: "telegram",
                 link: "/about",
                 icon: "lg:text-gray-300 text-gray-500 fab fa-telegram text-lg leading-lg "
             },
             {
+                id: 4,
                 name: "instagram",
                 link: "/team",
                 icon: "lg:text-gray-300 text-gray-500 fab fa-instagram text-lg leading-lg "
@@ -49,12 +56,12 @@ const Header = () => {
             <nav className="top-0 absolute z-50 w-full flex flex-wrap items-center justify-between px-2 py-3">
                 <div className="container px-4 mx-auto flex flex-wrap items-center justify-between">
                     <div className="w-full relative flex justify-between lg:w-auto lg:static lg:block lg:justify-start">
-                        <a href=""
+                        <Link to="/"
 
                             className="text-sm font-bold leading-relaxed inline-block mr-4 py-2 whitespace-nowrap uppercase text-white ml-2">
                             <i className="lg:text-gray-300 text-gray-500 fas fa-home text-lg leading-lg mr-2"></i>
                             Home
-                        </a>
+                        </Link>
                         
                         
                         <button
@@ -74,7 +81,8 @@ const Header = () => {
                         <ul className="flex flex-col lg:flex-row list-none mr-auto">
                             {
                                 leftLinks.map((leftLink) => (
-                                    <li className="flex items-center">
+                                    
+                                    <li className="flex items-center" key={leftLink.id}>
                                         <a href={leftLink.link}
                                             className="lg:text-white lg:hover:text-gray-300 text-gray-800 px-3 py-4 lg:py-2 flex items-center text-xs uppercase font-bold">
                                             {<i className={leftLink.icon}></i>}
@@ -94,7 +102,7 @@ const Header = () => {
                         </button>
                             {
                                 sochials.map((sochial) => (
-                                    <li className="flex items-center ">
+                                    <li className="flex items-center " key={sochial.id}>
                                         <a href={sochial.name}
                                             className="lg:text-white lg:hover:text-gray-300 text-gray-800 px-3 py-4 lg:py-2 flex items-center text-xs uppercase ">
                                             <i className={sochial.icon}></i>
@@ -107,8 +115,8 @@ const Header = () => {
                                 <button
                                     className="bg-white text-gray-800 active:bg-gray-200 text-xs font-bold uppercase px-4 py-2 rounded shadow hover:shadow-md outline-none focus:outline-none lg:mr-1 lg:mb-0 ml-3 mb-3"
                                     type="button">
-                                    <i className="fas fa-arrow-circle-down mr-2"></i>
-                                    Buy your favorite itmes</button>
+                                    <i className="fas fa-sign-in-alt mr-2"></i>
+                                    log in</button>
                             </li>
 
                         </ul>

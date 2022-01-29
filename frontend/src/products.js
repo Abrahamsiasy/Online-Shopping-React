@@ -1,0 +1,122 @@
+const products = [
+  {
+    _id: '0',
+    name: 'Acer Aspire 5 A515-46-R14K',
+    image: 'https://m.media-amazon.com/images/I/71+2H96GHZL._AC_SX300_SY300_.jpg',
+    description:
+      'Acer Aspire 5 A515-46-R14K Slim Laptop | 15.6" Full HD IPS | AMD Ryzen 3 3350U Quad-Core Mobile Processor | 4GB DDR4 | 128GB NVMe SSD | WiFi 6 | Backlit KB | Amazon Alexa | Windows 10 Home (S mode)',
+    brand: 'Acer',
+    category: 'Electronics',
+    price: 479.99,
+    countInStock: 10,
+    rating: 4.5,
+    numReviews: 12,
+  },
+  {
+    _id: '1',
+    name: 'Airpods Wireless Headphones',
+    image: '/images/airpods.jpg',
+    description:
+      'Bluetooth technology lets you connect it with compatible devices wirelessly High-quality AAC audio offers immersive listening experience Built-in microphone',
+    brand: 'Apple',
+    category: 'Electronics',
+    price: 89.99,
+    countInStock: 10,
+    rating: 4.5,
+    numReviews: 12,
+  },
+  {
+    _id: '2',
+    name: 'iPhone 11 Pro 256GB Memory',
+    image: '/images/phone.jpg',
+    description:
+      'Introducing the iPhone 11 Pro. A transformative triple-camera system that adds tons of capability without complexity. An unprecedented leap in battery life',
+    brand: 'Apple',
+    category: 'Electronics',
+    price: 599.99,
+    countInStock: 2,
+    rating: 4.0,
+    numReviews: 8,
+  },
+  {
+    _id: '3',
+    name: 'Cannon EOS 80D DSLR Camera',
+    image: '/images/camera.jpg',
+    description:
+      'Characterized by versatile imaging specs, the Canon EOS 80D further clarifies itself using a pair of robust focusing systems and an intuitive design',
+    brand: 'Cannon',
+    category: 'Electronics',
+    price: 929.99,
+    countInStock: 5,
+    rating: 3,
+    numReviews: 12,
+  },
+  {
+    _id: '4',
+    name: 'Sony Playstation 4 Pro White Version',
+    image: '/images/playstation.jpg',
+    description:
+      'The ultimate home entertainment center starts with PlayStation. Whether you are into gaming, HD movies, television, music',
+    brand: 'Sony',
+    category: 'Electronics',
+    price: 399.99,
+    countInStock: 11,
+    rating: 5,
+    numReviews: 12,
+  },
+  {
+    _id: '5',
+    name: 'Logitech G-Series Gaming Mouse',
+    image: '/images/mouse.jpg',
+    description:
+      'Get a better handle on your games with this Logitech LIGHTSYNC gaming mouse. The six programmable buttons allow customization for a smooth playing experience',
+    brand: 'Logitech',
+    category: 'Electronics',
+    price: 49.99,
+    countInStock: 7,
+    rating: 3.5,
+    numReviews: 10,
+  },
+  {
+    _id: '6',
+    name: 'Amazon Echo Dot 3rd Generation',
+    image: '/images/alexa.jpg',
+    description:
+      'Meet Echo Dot - Our most popular smart speaker with a fabric design. It is our most compact smart speaker that fits perfectly into small space',
+    brand: 'Amazon',
+    category: 'Electronics',
+    price: 29.99,
+    countInStock: 0,
+    rating: 4,
+    numReviews: 12,
+  },
+  {
+    _id: '7',
+    name: 'HP Pavilion Gaming 15-Inch Micro-Edge Laptop',
+    image: 'https://m.media-amazon.com/images/I/71qmnsh6WOS._AC_SY355_.jpg',
+    description:
+      'HP Pavilion Gaming 15-Inch Micro-Edge Laptop, Intel Core i5-9300H Processor, NVIDIA GeForce GTX 1650 (4 GB), 8 GB SDRAM, 256 GB SSD, Windows 10 Home (Shadow Black/Acid Green)',
+    brand: 'Hp',
+    category: 'Electronics',
+    price: 759.95,
+    countInStock: 2,
+    rating: 4.5,
+    numReviews: 315,
+  },
+
+  {
+    _id: '8',
+    name: 'Omen 17 Gaming Laptop',
+    image: 'https://m.media-amazon.com/images/I/71krmaqWFrS._AC_SX466_.jpg',
+    description:
+      'Omen 17 Gaming Laptop, NVIDIA GeForce RTX 3060, Intel Core i7-11800H, 16 GB RAM, 512 GB SSD, 17.3” Full HD 144 Hz Display, Windows 10 Home, RGB Keyboard, Long Battery Life (17-ck0010nr, 2021)',
+    brand: 'Hp',
+    category: 'Electronics',
+    price: 1437.85,
+    countInStock: 2,
+    rating: 4.5,
+    numReviews: 7,
+  },
+]
+
+export default products
