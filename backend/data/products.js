@@ -1,6 +1,5 @@
 const products = [
   {
-    _id: '0',
     name: 'Acer Aspire 5 A515-46-R14K',
     image: 'https://m.media-amazon.com/images/I/71+2H96GHZL._AC_SX300_SY300_.jpg',
     description:
@@ -13,7 +12,6 @@ const products = [
     numReviews: 12,
   },
   {
-    _id: '1',
     name: 'Airpods Wireless Headphones',
     image: '/images/airpods.jpg',
     description:
@@ -26,7 +24,6 @@ const products = [
     numReviews: 12,
   },
   {
-    _id: '2',
     name: 'iPhone 11 Pro 256GB Memory',
     image: '/images/phone.jpg',
     description:
@@ -39,7 +36,6 @@ const products = [
     numReviews: 8,
   },
   {
-    _id: '3',
     name: 'Cannon EOS 80D DSLR Camera',
     image: '/images/camera.jpg',
     description:
@@ -52,7 +48,6 @@ const products = [
     numReviews: 12,
   },
   {
-    _id: '4',
     name: 'Sony Playstation 4 Pro White Version',
     image: '/images/playstation.jpg',
     description:
@@ -65,7 +60,6 @@ const products = [
     numReviews: 12,
   },
   {
-    _id: '5',
     name: 'Logitech G-Series Gaming Mouse',
     image: '/images/mouse.jpg',
     description:
@@ -78,7 +72,6 @@ const products = [
     numReviews: 10,
   },
   {
-    _id: '6',
     name: 'Amazon Echo Dot 3rd Generation',
     image: '/images/alexa.jpg',
     description:
@@ -91,7 +84,6 @@ const products = [
     numReviews: 12,
   },
   {
-    _id: '7',
     name: 'HP Pavilion Gaming 15-Inch Micro-Edge Laptop',
     image: 'https://m.media-amazon.com/images/I/71qmnsh6WOS._AC_SY355_.jpg',
     description:
@@ -105,7 +97,6 @@ const products = [
   },
 
   {
-    _id: '8',
     name: 'Omen 17 Gaming Laptop',
     image: 'https://m.media-amazon.com/images/I/71krmaqWFrS._AC_SX466_.jpg',
     description:
@@ -119,4 +110,4 @@ const products = [
   },
 ]
 
-module.exports = products
+export default products

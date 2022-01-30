@@ -29,7 +29,7 @@ const ProdcutScreen = () => {
   useEffect( () => {
     const fetchProduct = async() => {
       const res = await axios.get(`/api/products/${id}`)
-      console.log(res.data)
+      // console.log(res.data)
       setProduct(res.data)
     }
     fetchProduct()
