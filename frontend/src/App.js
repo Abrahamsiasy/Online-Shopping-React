@@ -15,7 +15,7 @@ export default function App() {
       <main className='container ml-auto mr-auto min-h-screen'>
         <Routes>
           <Route path="/" element={<HomeScreen /> } />
-          <Route path="product/:id" element={<ProdcutScreen /> } />
+          <Route path="/product/:id" element={<ProdcutScreen /> } />
 
         </Routes>
         

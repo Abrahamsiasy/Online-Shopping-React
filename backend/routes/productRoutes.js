@@ -8,6 +8,7 @@ const router = express.Router()
 
 router.get('/', expressAsyncHandler(async (req, res) => {
     const products = await Product.find({})
+    // throw new Error('Some Error')
     res.json(products)
 }))
 
@@ -17,6 +18,7 @@ router.get('/:id', expressAsyncHandler (async (req, res) => {
     if (product) {
         res.json(product)
     } else {
+        console.log()
         res.status(404)
         throw new Error('Product not found')
     }
