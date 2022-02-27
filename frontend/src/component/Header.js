@@ -94,12 +94,12 @@ const Header = () => {
                         </ul>
 
                         <ul className="flex flex-col lg:flex-row list-none lg:ml-auto ">
-                        <button
-                            className="cursor-pointer text-xl text-red-500 leading-none px-3 py-1 border-solid border-transparent rounded-full bg-transparent block focus:outline-none uppercase"
+                        <Link to="/cart"
+                            className="cursor-pointer text-xl text-red-500 leading-none px-3 py-3 border-solid border-transparent rounded-full bg-transparent block focus:outline-none uppercase"
                             type="button" onClick="toggleNavBar('collaps-nav-bar')" >
                             <i className="text-white fas fa-cart-plus"></i>  12
 
-                        </button>
+                        </Link>
                             {
                                 sochials.map((sochial) => (
                                     <li className="flex items-center " key={sochial.id}>

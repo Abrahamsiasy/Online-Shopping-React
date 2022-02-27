@@ -4,6 +4,7 @@ import Footer from './component/Footer';
 import HomeScreen from './screens/HomeScreen';
 import { BrowserRouter as Router, Routes,  Route,} from "react-router-dom";
 import ProdcutScreen from './screens/ProdcutScreen';
+import CartScreen from './screens/CartScreen';
 
 export default function App() {
   return (
@@ -16,6 +17,8 @@ export default function App() {
         <Routes>
           <Route path="/" element={<HomeScreen /> } />
           <Route path="/product/:id" element={<ProdcutScreen /> } />
+          <Route path='/cart/:id' element={<CartScreen /> } />
+          <Route path='/cart/' element={<CartScreen /> } />
 
         </Routes>
         
